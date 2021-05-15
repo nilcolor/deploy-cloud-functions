@@ -133,8 +133,9 @@ export class CloudFunction {
 
     // Add labels if any
     if (opts?.labels) {
-      console.log(`Given labels: ${opts.labels}!`);
+      console.log(`Given labels: ${opts.labels}`);
       request.labels = this.parseEnvVars(opts.labels);
+      console.log('Labels to send', request.labels);
     }
 
     this.request = request;
